@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+
+<meta charset="utf-8">
+
+<title>POWWOW</title>
+
+
+
+<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+<!-- TEXT -->
+<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Abel|Oswald:700" rel="stylesheet">
+
+
+<!-- MAIN CSS -->
+<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()" class="sidenav">&#9776;</span>
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">FESTIVAL</a></li>
+            <li><a href="#">ARTIST</a></li>
+            <li><a href="#">MAP</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<div class="wrapper">
+<div class="main">
+<div class="circle">
+  <div class="content">
+    <img width="75%" height="75%" src="img/logo.gif">
+  </div>
+</div>
+<img class="splatter" src="http://www.onlygfx.com/wp-content/uploads/2016/08/paint-splatter-13.png">
+
+<section class="home">
+<div class="page_container">
+  <video playsinline autoplay muted loop poster="" id="bgvid">
+  <source src="video/powwowvid.mp4" type="video/mp4">
+  </video>
+</div>
+</section>
+
+
+<div class="page_container">
+<section id="festival" class="festival">
+    <div id="hi2">
+    <a class="hawaii" id="btnClick2"><h2>HAWAII</h2></a>
+    <a class="tokyo" href=""><h2>TOKYO</h2></a>
+    <a class="taiwan" href=""><h2>TAIWAN</h2></a>
+    <a class="longbeach" href=""><h2>LONG BEACH</h2></a>
+    <a class="antelopvalley" href=""><h2>ANTELOP VALLEY</h2></a>
+    <a class="worcester" href=""><h2>WORCESTER</h2></a>
+    <a class="sxsw" href=""><h2>SXSW</h2></a>
+    </div>
+    <div id="bye2" style="display:none;">
+        <p><h1>SAP</h1>
+    </div>
+    </section>
+</div>
+
+
+
+<div class="page_container">
+<section id="artist" class="artist">
+    <div class="artisttext">
+    <h3>OG SLICK</h3>
+        <a href=""><h4>FEATURED WORK</h4></a>
+    </div>
+
+</section>
+
+<section class="map">
+<div class="map-property">
+    <iframe src="https://snazzymaps.com/embed/30624" width="1200px" height="100%" style="border:none;"></iframe>
+    </div>
+</section>
+
+<section class="about">
+<div class="page_container">
+<div id="hi">
+    <p><h2>POW! IT’S THE  IMPACT THAT ART HAS ON A PERSON.</h2>
+    <p><h2>WOW! IT’S REACTION THAT ART HAS ON A VIEWER.</h2>
+
+<h1>INTERNATIONAL ART FESTIVAL</h1>
+</div>
+
+<div id="bye" style="display:none;">
+    <p><h6>Centered around a week-long event in Hawaii, POW! WOW! has grown into a global network of artists and organizes gallery shows, lecture series, schools for art and music, mural projects, a large creative space named Lana Lane Studios, concerts, and live art installations across the globe. The central event takes place during Valentine’s Day week in February in the Kaka’ako district of Honolulu, and brings over a hundred international and local artist together to create murals and other forms of art. The festival is expanding to cities and countries such as Taiwan, Long Beach, Israel, Singapore, Jamaica, Washington D.C., Guam, New Zealand, Germany and more.</h6>
+
+</div>
+<button id="btnClick">LEARN MORE</button>
+
+
+</div>
+</section>
+    </div>
+</div>
+</div>
+
+<!-- JQUERY -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+<!-- ONEPGESCROLL.JS -->
+<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+
+<iframe src="https://snazzymaps.com/embed/30624" width="100%" height="600px" style="border:none;"></iframe>
+
+
+<script>
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+$(document).ready(function(){
+
+    //Init ONEPAGESCROLL
+    $(".main").onepage_scroll({
+        sectionContainer: "section",
+        responsiveFallback: 600,
+        loop: true
+    });
+
+
+
+  $("nav li:nth-child(1) a").click(function(){
+        $(".main").moveTo(1);
+        closeNav();
+        return false;
+        console.log("two");
+    });
+    $("nav li:nth-child(2) a").click(function(){
+        $(".main").moveTo(2);
+        closeNav();
+        return false;
+        console.log("two");
+    });
+    $("nav li:nth-child(3) a").click(function(){
+        $(".main").moveTo(3);
+        closeNav();
+        return false;
+        console.log("two");
+    });
+    $("nav li:nth-child(4) a").click(function(){
+        $(".main").moveTo(4);
+        closeNav();
+        return false;
+        console.log("two");
+    });
+    $("nav li:nth-child(5) a").click(function(){
+        $(".main").moveTo(5);
+        closeNav();
+        return false;
+        console.log("two");
+    });
+
+
+});
+
+</script>
+
+<!--CLICK CONTENT CHANGE -->
+<script>
+    $('#btnClick').on('click',function(){
+    if($('#hi').css('display')!='none'){
+    $('#bye').html('Centered around a week-long event in Hawaii, POW! WOW! has grown into a global network of artists and organizes gallery shows, lecture series, schools for art and music, mural projects, a large creative space named Lana Lane Studios, concerts, and live art installations across the globe. The central event takes place during Valentine’s Day week in February in the Kaka’ako district of Honolulu, and brings over a hundred international and local artist together to create murals and other forms of art. The festival is expanding to cities and countries such as Taiwan, Long Beach, Israel, Singapore, Jamaica, Washington D.C., Guam, New Zealand, Germany and more.').show().siblings('div').hide();
+    }else if($('#bye').css('display')!='none'){
+        $('#hi').show().siblings('div').hide();
+    }
+});
+</script>
+    
+<script>
+    $('#btnClick2').on('click',function(){
+    if($('#hi2').css('display')!='none'){
+    $('#bye2').html
+    ('HAWAII<div id="years"> <a href=""><li>2010</li></a> <a href=""><li>2011</li></a> <a href=""><li>2012</li></a> <a href=""><li>2013</li></a> <a href=""><li>2014</li></a> <a href=""><li>2015</li></a> <a href=""><li>2016</li></a> <a href=""><li>2017</li></a></div>').show().siblings('div').hide();
+    }else if($('#bye2').css('display')!='none'){
+        $('#hi2').show().siblings('div').hide();
+    }
+});
+</script>
+
+</body>
+</html>
